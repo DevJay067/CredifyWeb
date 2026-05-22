@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { AuthProvider } from "@/hooks/use-auth";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { 
@@ -61,7 +60,6 @@ export default function DashboardLayout({
   }
 
   return (
-    <AuthProvider>
     <div className="flex h-screen overflow-hidden bg-black text-white selection:bg-white/10 mesh-gradient">
       {/* Sidebar */}
       <aside className="w-72 flex flex-col z-20 relative">
@@ -197,6 +195,5 @@ export default function DashboardLayout({
         </main>
       </div>
     </div>
-    </AuthProvider>
   );
 }
